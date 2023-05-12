@@ -7,6 +7,7 @@ interface ProjectProps {
   description: string
   thumbnail: string
   video: string
+  position: "left" | "right"
 }
 
 const animate = keyframes`
