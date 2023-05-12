@@ -38,22 +38,26 @@ const Project = (props: ProjectProps) => {
 
   return (
     <AnimatedDiv
-      className={`border overflow-hidden w-32 h-32 sm:w-96 sm:h-56 ${
+      className={`border overflow-hidden w-32 h-32 sm:w-96 sm:h-56 transition-all ${
         isHovered ? "expanded" : ""
       }`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {isHovered ? (
-        <video
-          className="m-0 h-5/6 w-full object-cover"
-          src={props.video}
-          autoPlay
-          muted
-        />
-      ) : (
-        <img className="m-0 h-5/6 w-full object-cover" src={props.thumbnail} />
-      )}
+      <video
+        className={`m-0 h-5/6 w-full object-cover transition-opacity ${
+          isHovered ? "opacity-100 block" : "opacity-0 hidden"
+        }`}
+        src={props.video}
+        autoPlay
+        muted
+      />
+      <img
+        className={`m-0 h-5/6 w-full object-cover ${
+          isHovered ? "hidden" : "block"
+        }`}
+        src={props.thumbnail}
+      />
       <div>Project 1</div>
     </AnimatedDiv>
   )
