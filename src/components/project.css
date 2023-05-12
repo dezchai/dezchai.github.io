@@ -1,0 +1,5 @@
+.expanded {
+  width: 28rem;
+  height: 16rem;
+  transition: all 1s ease-in-out;
+}

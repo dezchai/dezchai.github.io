@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+  scale: 1.5 !important;
+  background: #f00 !important;
+}
+
+body {
+  /* font-family: Helvetica Neue; */
+  color: white;
+}
+
+.fixFlicker {
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
+.section {
+  height: 100vh;
+}
+
+.fp-watermark {
+  display: none !important;
+}
+.fp-watermark > a {
+  display: none !important;
+}
