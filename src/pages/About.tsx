@@ -15,7 +15,7 @@ const About = () => {
           ac ultrices ipsum molestie eu. Ut porttitor magna nibh, in dapibus
           erat elementum sagittis. Ut sit amet rutrum ligula. Nulla varius
           libero vitae nulla auctor placerat. Mauris consequat in lectus quis
-          rhoncus. Aliquam erat volutpat. Aliquam erat volutpat.
+          rhoncus. Aliquam erat volutpat. Aliqueam erat volutpat.
         </div>
         <img
           className="w-1/4 m-4 xl:m-64 rounded-full"
