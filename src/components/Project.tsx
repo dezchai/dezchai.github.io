@@ -7,7 +7,7 @@ interface ProjectProps {
   description: string
   thumbnail: string
   video: string
-  position: "left" | "right"
+  position: string
 }
 
 const animate = keyframes`
@@ -37,20 +37,22 @@ const Project = (props: ProjectProps) => {
   const [isHovered, setIsHovered] = useState(false)
 
   return (
-    <AnimatedDiv
-      className={`border overflow-hidden w-32 h-32 sm:w-96 sm:h-56 transition-all ${
-        isHovered ? "expanded" : ""
-      }`}
+    <div
+      className="w-40 h-24 m-2.5 sm:m-0 sm:h-56 sm:w-96 hover:scale-125 transition duration-300 cursor-pointer"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      onClick={() => {
+        window.open(props.video)
+      }}
     >
       <video
-        className={`m-0 h-5/6 w-full object-cover transition-opacity ${
+        className={`w-full object-cover transition-opacity  ${
           isHovered ? "opacity-100 block" : "opacity-0 hidden"
         }`}
         src={props.video}
         autoPlay
         muted
+        loop
       />
       <img
         className={`m-0 h-5/6 w-full object-cover ${
@@ -58,8 +60,10 @@ const Project = (props: ProjectProps) => {
         }`}
         src={props.thumbnail}
       />
-      <div>Project 1</div>
-    </AnimatedDiv>
+      <div className="bg-neutral-900 h-1/6 text-xs sm:text-base">
+        {props.title}
+      </div>
+    </div>
   )
 }
 
