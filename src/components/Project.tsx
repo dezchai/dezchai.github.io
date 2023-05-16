@@ -1,6 +1,6 @@
 import { useState } from "react"
 import "./project.css"
-import styled, { keyframes } from "styled-components"
+// import styled, { keyframes } from "styled-components"
 
 interface ProjectProps {
   title: string
@@ -10,28 +10,28 @@ interface ProjectProps {
   position: string
 }
 
-const animate = keyframes`
- 0% {
- box-shadow: 0px 0px 20px hsl(0, 100%, 50%);
- }
- /* Cycle through all colors of the rainbow */
- 25% {
- box-shadow: 0px 0px 20px hsl(90, 100%, 50%);
- }
- 50% {
- box-shadow: 0px 0px 20px hsl(180, 100%, 50%);
- }
- 75% {
- box-shadow: 0px 0px 20px hsl(270, 100%, 50%);
- }
- /* Add an additional keyframe that matches the first keyframe */
- 100% {
- box-shadow: 0px 0px 20px hsl(0, 100%, 50%);
- }
-`
-const AnimatedDiv = styled.div`
-  animation: ${animate} 5s linear infinite;
-`
+// const animate = keyframes`
+//  0% {
+//  box-shadow: 0px 0px 20px hsl(0, 100%, 50%);
+//  }
+//  /* Cycle through all colors of the rainbow */
+//  25% {
+//  box-shadow: 0px 0px 20px hsl(90, 100%, 50%);
+//  }
+//  50% {
+//  box-shadow: 0px 0px 20px hsl(180, 100%, 50%);
+//  }
+//  75% {
+//  box-shadow: 0px 0px 20px hsl(270, 100%, 50%);
+//  }
+//  /* Add an additional keyframe that matches the first keyframe */
+//  100% {
+//  box-shadow: 0px 0px 20px hsl(0, 100%, 50%);
+//  }
+// `
+// const AnimatedDiv = styled.div`
+//   animation: ${animate} 5s linear infinite;
+// `
 
 const Project = (props: ProjectProps) => {
   const [isHovered, setIsHovered] = useState(false)
